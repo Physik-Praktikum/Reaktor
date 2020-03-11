@@ -1,0 +1,13 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Versuchsziel und Aufgabenstellung}{2}{section.1}
+\contentsline {section}{\numberline {2}Theoretische Grundlagen}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Kernspaltung und U-235}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Art des Reaktorstarts und Nullleistungsreaktor}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Zust\IeC {\"a}nde des Reaktors}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Prompte und verz\IeC {\"o}gerte Neutronen}{7}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Aufbau und Funktionsweise des AKR-2}{8}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Steuerstabkennlinien}{9}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Messung der stabilen Reaktorperiode und INHOUR-Gleichung}{10}{subsection.2.7}
+\contentsline {section}{\numberline {3}Durchf\IeC {\"u}hrung}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}Vorbereitung auf den Reaktorstart}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Wiederholungsstart}{13}{subsection.3.2}
