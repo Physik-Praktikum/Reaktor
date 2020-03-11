@@ -289,6 +289,26 @@ Für eine ordnungsgemäße Inbetriebnahme des Reaktors ist die Abschalteinrichtu
 \end{enumerate} 
 Durch diese Überprüfung ist sichergestellt, dass im Ernstfall jederzeit eine RESA ausgelöst werden kann und die dafür notwendigen technischen Mechanismen alle richtig funktionieren. Da es sich hier um einen Ausbildungsreaktor handelt, gibt es eine Anfahrverriegelung: Wird ein fest vorgeschriebenes Schema zum Anfahren des Reaktors nicht eingehalten oder werden während des Experiments bestimmte Grenzwerte der Leistung oder der Neutronenflussdichte nicht eingehalten, wird vom System automatisch eine RESA ausgelöst. Damit sollen Unfälle durch unsachgemäße Handhabung verhindert werden. Damit sind alle Überprüfungen abgeschlossen und der Reaktor kann gestartet werden. Der Vollständigkeit halber sei angemerkt, dass bei kritischen Experimenten noch weitere Überprüfungen nötig sind.
 \subsection{Wiederholungsstart}
+Der Wiederholungsstart hat nach einem vorgeschriebenen Ablaufplan zu erfolgen, welcher in Abb. 9 illustriert ist.
+\newpage
+
+
+\begin{figure}[h!]\centering
+\includegraphics[width=0.7\textwidth]{/home/tom/GitHub_Repositories/Reaktor/Anlassschema.png}
+\caption{Anfahrverriegelung, entnommen aus \cite{4}.}
+\end{figure}
+
+
+\newpage
+Der Weg vom unterkritischen in den kritischen Zustand ist praktisch nicht durchführbar, da hierzu eine unendlich lange Wartezeit erforderlich wäre. Der kritische Zustand kann nur vom überkritischen Bereich aus erreicht werden.
+Nachdem der Reaktor vom unterkritischen in den überkritischen Zustand versetzt wurde, nimmt seine Leistung gemäß Abb. 5 kontinuierlich zu. Der letzte Schritt besteht nun darin, den Reaktor bei der geforderten Leistung von exakt \(P=2.00\,\mathrm{W}\) kritisch zu machen. Dazu wartet man im überkritischen Betrieb ab, bis etwa \(80\,\%\) des Sollwertes erreicht sind und fährt dann die Steuerstäbe ein. Die Leistung nimmt dann weiter zu, allerdings wird die Verdopplungszeit immer länger. Somit kann man sich dem kritischen Zustand mit \(T=\infty\) von oben annähern und die geforderte Leistung erreichen. Für die Durchführung ist die Kenntnis des Reaktorverhaltens abhängig von seinem Zustand unerlässlich. Sie ist in Abb. 10 für die Leistung dargestellt: \\\\
+\begin{figure}[h!]\centering
+\includegraphics[width=0.8\textwidth]{Reaktion_des_Reaktors.png}
+\caption{Reaktion der Reaktorleistung auf Änderungen der normierten Reaktivität, entnommen aus \cite{1}}
+\end{figure}
+\\\\
+Die Reaktorleistung folgt prinzipiell der Reaktivitätsänderung hinsichtlich des Vorzeichens. Im unterkritischen Bereich gibt es dabei zunächst einen prompten Sprung und nach kurzer Zeit stellt sich ein konstanter Wert ein. Im überkritischen Bereich gibt es ebenfalls einen prompten Sprung. Es stellt sich jedoch kein konstanter Wert ein, sondern es kommt mit einer Verzögerung von etwa einer Minute zu einem exponentiellen Anwachsen der Leistung. Dieses für Reaktoren typische Verhalten wurde im Versuch beobachtet und ist wesentlich für die korrekte Steuerung von kerntechnischen Anlagen. Nach jedem Ein- oder Ausfahren der Steuerstäbe muss abgewartet werden, wie der Reaktor auf die veränderten Bedingungen reagiert. Insbesondere sind Messwerte der stabilen Reaktorperiode nur dann verlässlich und überhaupt sinnvoll, wenn die Zeitmessung erst nach erreichen des exponentiellen Anwachsens gestartet wurde. Die Einstellung der gewünschten Leistung ist damit auch mit einem gewissen zeitlichen Aufwand und Sorgfalt verbunden.
+\subsection{Steuerstabkalibrierung}
     % Bibliographie/Literaturverzeichnis
     \begin{thebibliography}{9}
     \bibitem{1}
@@ -297,6 +317,8 @@ Durch diese Überprüfung ist sichergestellt, dass im Ernstfall jederzeit eine R
     Reaktorpraktikum. Versuch Steuerstabkalibrierung. Versuchsanleitung. Technische Universität Dresden. Institut für           Energietechnik.
    \bibitem{3}
     Einführung Kernreaktorpraktikum. Technische Universität Dresden. Institut für           Energietechnik.
+    \bibitem{4}
+    Reaktorpraktikum. Beschreibung des Aufbaus, der Funktionskontrolle und der Betriebsprotokollierung. Technische Universität Dresden. Institut für Energietechnik.
     \bibitem{bindungsenergie}
     https://www.abiweb.de/physik-atomphysik-kernphysik/kernphysik-2/anwendung-nutzung-der-kernenergie.html (05.03.2020,      12:45)
   \bibitem{sigma_neutronen}
