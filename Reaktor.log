@@ -1,0 +1,85 @@
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6930 64-bit)  (format=lualatex 2020.3.5)  5 MAR 2020 15:32
+ restricted system commands enabled.
+**Reaktor.tex
+(./Reaktor.tex
+LaTeX2e <2018-12-01>
+Lua module: luaotfload-main 2018-10-28 2.93 luaotfload entry point
+Lua module: luaotfload-init 2018-10-28 2.93 luaotfload submodule / initializatio
+n
+Lua module: lualibs 2018-10-18 2.61 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2018-10-18 2.61 ConTeXt Lua libraries -- extended c
+ollection.
+Lua module: luaotfload-log 2018-10-28 2.93 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2018-10-28 2.93 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2018-10-28 2.93 luaotfload submodule / conf
+ig file reader
+luaotfload | conf : Root cache directory is C:/Users/Konstantin/AppData/Local/Mi
+KTeX/2.9/luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2018-10-28.lua” from kpse
+-resolved path “C:/Users/Konstantin/AppData/Local/Programs/MiKTeX 2.9/tex/luat
+ex/luaotfload/fontloader-2018-10-28.lua”.
+Lua-only attribute luaotfload@state = 1
+Lua-only attribute luaotfload@noligature = 2
+Lua-only attribute luaotfload@syllabe = 3
+luaotfload | init : Context OpenType loader version “3.106”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2018-10-28 2.93 luaotfload submodule / callback h
+andling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2018-10-28 2.93 luaotfload submodule / database
+Lua module: luaotfload-colors 2018-10-28 2.93 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 4
+Lua module: luaotfload-resolvers 2018-10-28 2.93 luaotfload submodule / resolver
+s
+luaotfload | conf : Root cache directory is C:/Users/Konstantin/AppData/Local/Mi
+KTeX/2.9/luatex-cache/generic/names.
+Lua module: luaotfload-features 2018-10-28 2.93 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2018-10-28 2.93 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2018-10-28 2.93 luaotfload submodule / auxiliar
+y functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 1.789 seconds
+
+("C:/Users/Konstantin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/s
+crartcl.cls"
+Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
+
+("C:/Users/Konstantin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/s
+crkbase.sty"
+Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+("C:/Users/Konstantin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/s
+crbase.sty"
+Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+("C:/Users/Konstantin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/keyv
+al.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:/Users/Konstantin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/s
+crlfile.sty"
+Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
+)))
+("C:/Users/Konstantin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/t
+ocbasic.sty"
+Package: tocbasic 2019/02/01 v3.26b KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip41
+\scr@dte@tocline@numbox=\box27
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 134.
+Class scrartcl Info: File `scrsize11pt.clo' used ins
