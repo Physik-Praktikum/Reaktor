@@ -1,0 +1,73 @@
+% This code calculates the reactivity curve of the AKR's control rod (CR) *
+% You have to provide the control rod movement in units of CR digits and  *
+% the corresponding doubling time T2.                                     *
+% Autor: Dr. Carsten Lange                                                *
+
+clear all
+load CR_data  % this file contains the control rod movement in units of digits and the corresponding doublingtime T2 
+%CR_data = CR_data25112016;
+
+CR_position = [CR_data(:,1); 4000]; % CR-movement in digits
+CR_steps    = CR_position - [0; CR_position(1:length(CR_position)-1)];
+CR_position = CR_position(1:length(CR_position)-1);
+CR_steps    = CR_steps(1:length(CR_steps)-1);
+T2          = CR_data(:,2); % doubling time
+Ts          = T2/log(2)     % stable reactor period
+beta     = 0.0076; % fraction of delayed neutrons/ (all precursor groups delivering delayed neutrons)
+Lambda   = 59.18088*10^(-6);% generation time
+lambdai    = [0.0124; 0.0305; 0.111; 0.301; 1.14;  3.01]; % decaying constants for each precursor group
+betai_beta = [0.033;  0.219;  0.196; 0.395; 0.115; 0.042];% fraction of each precursor group
+tau_i      = [1/0.0124; 1/0.0305; 1/0.111; 1/0.301; 1/1.14;  1/3.01];
+avg_tau = (tau_i'*betai_beta);
+avg_lambda = 1/avg_tau;
+
+%**************************************************************************
+% this part solves the Inhour equation, where Ts is the input             *
+sum_ratio_IH = 0;
+for l=1:1:6    
+   sum_ratio_IH = sum_ratio_IH + betai_beta(l)*beta./(1+lambdai(l)*Ts);
+end
+rho = Lambda./Ts + sum_ratio_IH;
+
+%show Ts and reactivities
+Ts
+rho_dollar = rho/beta  
+
+%**************************************************************************
+% calculate the integral curve of the rod characteristics                 *
+int_rho_dollar = [];
+for l=1:1:length(rho_dollar)    
+   int_rho_dollar = [int_rho_dollar; sum(rho_dollar(1:l))];
+end
+
+total_reactivity = sum(rho_dollar) % total rod reactivity
+
+%=========================================================================*
+% plot the rod characteristics                                            *
+% differential rod curve                                                  *
+figure
+bar(CR_position - CR_steps/2,rho_dollar,0.95)
+title('differential control rod curve  of rod 1');
+xlabel('digits');
+ylabel('d\rho/dz');
+%plot(CR_position - CR_steps/2,rho_dollar,'O')
+
+CR_position    = [0; CR_position];
+int_rho_dollar = [0; int_rho_dollar];
+
+Xq = (1:1:4000);
+Vq = interp1(CR_position,int_rho_dollar,Xq,'pchip');
+% integral rod curve                                                      *
+figure
+plot(CR_position,int_rho_dollar,'o',Xq,Vq)
+title('integral control rod curve of rod 1');
+xlabel('digits');
+ylabel('\rho(z)');
+% 
+% xax = CR_position - CR_steps/2;
+diff_rho = [rho_dollar];
+int_rho  = [CR_position,int_rho_dollar];
+% 
+save('diff_rho','diff_rho','-ascii');
+save('int_rho','int_rho','-ascii');
+
