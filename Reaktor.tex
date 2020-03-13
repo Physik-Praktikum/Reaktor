@@ -48,7 +48,12 @@ separate-uncertainty,  % Unsicherheiten seperat angeben (mit ±)
 \newcommand*{\betreuer}{Dr. Carsten Lange}
 \newcommand*{\messung}{28.02.2020}
 \newcommand*{\ort}{AKR-2 (Pauer-Bau)}
-
+\addto{\captionsngerman}{
+\renewcommand*{\figurename}{Abb.}
+}
+\addto{\captionsngerman}{
+\renewcommand*{\tablename}{Tab.}
+}
 \hypersetup{pdfauthor={\autor}, pdftitle={\titel}}  % PDF-Metadaten setzen
 
 % automatischen Titel konfigurieren
@@ -307,8 +312,124 @@ Nachdem der Reaktor vom unterkritischen in den überkritischen Zustand versetzt 
 \caption{Reaktion der Reaktorleistung auf Änderungen der normierten Reaktivität, entnommen aus \cite{1}}
 \end{figure}
 \\\\
-Die Reaktorleistung folgt prinzipiell der Reaktivitätsänderung hinsichtlich des Vorzeichens. Im unterkritischen Bereich gibt es dabei zunächst einen prompten Sprung und nach kurzer Zeit stellt sich ein konstanter Wert ein. Im überkritischen Bereich gibt es ebenfalls einen prompten Sprung. Es stellt sich jedoch kein konstanter Wert ein, sondern es kommt mit einer Verzögerung von etwa einer Minute zu einem exponentiellen Anwachsen der Leistung. Dieses für Reaktoren typische Verhalten wurde im Versuch beobachtet und ist wesentlich für die korrekte Steuerung von kerntechnischen Anlagen. Nach jedem Ein- oder Ausfahren der Steuerstäbe muss abgewartet werden, wie der Reaktor auf die veränderten Bedingungen reagiert. Insbesondere sind Messwerte der stabilen Reaktorperiode nur dann verlässlich und überhaupt sinnvoll, wenn die Zeitmessung erst nach erreichen des exponentiellen Anwachsens gestartet wurde. Die Einstellung der gewünschten Leistung ist damit auch mit einem gewissen zeitlichen Aufwand und Sorgfalt verbunden.
+Die Reaktorleistung folgt prinzipiell der Reaktivitätsänderung hinsichtlich des Vorzeichens. Im unterkritischen Bereich gibt es dabei zunächst einen prompten Sprung und nach kurzer Zeit stellt sich ein konstanter Wert ein. Im überkritischen Bereich gibt es ebenfalls einen prompten Sprung. Es stellt sich jedoch kein konstanter Wert ein, sondern es kommt mit einer Verzögerung von etwa einer Minute zu einem exponentiellen Anwachsen der Leistung. Dieses für Reaktoren typische Verhalten wurde im Versuch beobachtet und ist wesentlich für die korrekte Steuerung von kerntechnischen Anlagen. Nach jedem Ein- oder Ausfahren der Steuerstäbe muss abgewartet werden, wie der Reaktor auf die veränderten Bedingungen reagiert. Insbesondere sind Messwerte der stabilen Reaktorperiode nur dann verlässlich und überhaupt sinnvoll, wenn die Zeitmessung erst nach erreichen des exponentiellen Anwachsens gestartet wurde. Die Einstellung der gewünschten Leistung ist daher auch mit einem gewissen zeitlichen Aufwand und Sorgfalt verbunden. \\\\
+Während des Versuchs wurden Dosisleistungen der Neutronenstrahlung und der \(\gamma\)-Strahlung gemessen, welche die beiden wesentlichen Bestandteile der Strahlenbelastung beim Betrieb eines Reaktors mit U-235 bilden. Die Dosisleistung wurde jeweils an drei verschiedenen Punkten im Reaktorsaal gemessen: Direkt am Reaktor, am Steuerpult und an einer Wand in größtmöglicher Entfernung zum Reaktor. Die genauen Positionen sind in Abb. 11 im Grundriss gezeigt. 
+\newpage
+
+
+\begin{figure}[h!]\centering
+\includegraphics[width=\textwidth]{Grundriss.png}
+\caption{Grundriss des Reaktorsaals; entnommen aus \cite{4}. Die Messpunkte für die Dosisleistung sind rot markiert und entsprechend der später folgender Tabelle numeriert. Die Messpunkte wurden nachträglich hinzugefügt.}
+\end{figure} 
+
+
+\newpage
+In Tab. 1 sind die aufgenommenen Dosisleistungen zusammengestellt:
+
+
+\begin{table}[h!]\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Messpunkt & Abstand zur Reaktorwand/\(\mathrm{m}\) & Dosisleistung \(\gamma\)/\(\mathrm{\mu Sv}\) & Dosisleistung \(\mathrm{n}\)/\(\mathrm{\mu Sv}\) \\\hline
+1 & 0.00 \(\pm\) 0.05 & 200.0 \(\pm\) 5.0 & 5.5 \(\pm\) 0.5\\\hline
+2 & 4.20 \(\pm\) 0.50 & 25.0 \(\pm\) 1.0 & 0.5\(\pm\) 0.1\\\hline
+3 & 10.00 \(\pm\) 0.50 & 0.5 \(\pm\) 0.1 & 0.3 \(\pm\) 0.1 \\\hline
+\end{tabular}
+\caption{Messwerte zur Dosisleistung an verschiedenen Stellen im Reaktorsaal.}
+\end{table}
+
+
+Der Abstand zur Reaktorwand wurde hier anhand der Grundrisszeichnung abgeschätzt. Gemäß der Betriebsanleitung hat der Reaktor einen Durchmesser von \(d=250\,\mathrm{cm}\). Diese Länge kann in der Zeichnung mit einem Lineal gemessen werden, wodurch sich ein Maßstab für die Entfernung der Messpunkt zur Reaktorwand ergibt. Aufgrund der endlichen Ablesegenauigkeit und einer gewissen Tolerenz zur Bestimmung des kürzesten Abstands zur Reaktorwand in der Zeichnung wurde der Fehler beim Ablesen geschätzt und daraus eine Unsicherheit im Abstand von \(50\,\mathrm{cm}\) angenommen. Die Unsicherheiten der Messgeräte wurden teilweise aus der Hälfte der kleinsten Skalenteilung, teils aus statistischen Schwankungen bei den sehr kleinen Werten geschätzt. Bei der Messung unmittelbar an der Reaktorwand wurde zusätzlich noch eine sehr kleine Unsicherheit von \(5\,\mathrm{cm}\) aufgrund der nichtverschwindenden Abmessungen des Geräts angenommen, die bei den großen Entfernungen aber keine Rolle mehr gegenüber der Unsicherheit beim Ablesen aus der Zeichnung spielt.  
 \subsection{Steuerstabkalibrierung}
+Nachdem der Reaktor vorschriftsmäßig in Betrieb genommen wurde, erfolgte eine Kalibrierung der Steuerstäbe mithilfe der Kompensationsmethode. Dazu wurde ein Stab komplett eingefahren, ein Stab komplett ausgefahren und der dritte Stab gerade soweit eingefahren, dass der Reaktor bei \(P=0.30\,\mathrm{W}\) kritisch wird. Der dritte Stab wurde danach nicht mehr bewegt. Die Anfahrneutronenquelle wurde zurück in die untere Endstellung gefahren. Folgendes Verfahren ermöglicht es nun, zwei Stäbe gleichzeitig zu kalibrieren:
+\begin{enumerate}
+\item Der komplett eingefahrene Stab wird ein Stück ausgefahren, wodurch sich die Reaktivität und die Reaktorleistung erhöhen. 
+\item Nach Abwarten der stabilen Reaktorperiode wurde die Verdopplungszeit von drei Personen unabhängig voneinander gemessen.
+\item Danach wurde der komplett ausgefahrene Stab stückweise soweit eingefahren, dass die Reaktorleistung wieder den Ausgangswert von \(P=0.30\,\mathrm{W}\) erreicht. Beide Stabstellungen sowie die Verdopplungszeit wurden notiert.
+\item Nun fängt man wieder bei 1. an und wiederholt das Verfahren solange, bis der anfangs komplett eingefahrene Stab komplett ausgefahren ist.
+\end{enumerate} 
+Hierfür waren eine gute Absprache im Team sowie zügiges Handeln sehr wesentlich, weil der Reaktor mitunter sehr sensitiv auf Änderungen der Stabstellung reagiert. Die Verdopplungszeit war teilweise sehr kurz, weswegen nach Messung derselben unverzüglich mit dem einzufahrenden Stab gegengesteuert werden muss, damit die Leistung keinen Grenzwert überschreitet. Gleichzeitig darf sie aber bei ausgefahrener Neutronenquelle auch nicht zu niedrig sein, was beim hier betrachteten Ausbildungsreaktor als zusätzliche technische Maßnahme so festgelegt wurde. In beiden Fällen würde durch das Sicherheitssystem automatisch eine RESA ausgelöst und der Versuch müsste erneut gestartet werden. Die ermittelten Messwerte sind in Tab. 2 zusammengestellt.
+
+
+\begin{table}[h!]\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+Stab 1 & Stab 2 & Stab 3 & \({T}_2^{(1)}/\mathrm{s}\) & \({T}_2^{(2)}/\mathrm{s}\) & \({T}_2^{(3)}/\mathrm{s}\) & \(\bar{T}_2/\mathrm{s}\) & \(T_{\mathrm{S}} =\frac{\bar{T}_2}{\ln 2}/\mathrm{s}\) & Zustand \\\hline
+0 & 4000 & 3233 & - & - & - & - & - & kritisch\\\hline
+799 & 4000 & 3233 & 176.56 & 177.38 & 174.03 & 175.99 \(\pm\) 1.43 & 254.00 \(\pm\) 2.06 & -  \\\hline
+799 & 3422 & 3233 & - & - & - & - & - & kritisch \\\hline
+1601 & 3422 & 3233 & 88.29 & 88.85 & 89.34 & 88.83 \(\pm\) 0.43 & 128.15 \(\pm\) 0.62 & - \\\hline
+1601 & 2682 & 3233 & - & - & - & - & - & kritisch \\\hline
+2401 & 2682 & 3233 & 60.30 & 59.53 & 60.50 & 60.11 \(\pm\) 0.42 & 86.72 \(\pm\) 0.61 & - \\\hline
+2401 & 1806 & 3233 & - & - & - & - & - & kritisch \\\hline
+3203 & 1806 & 3233 & 64.10 & 62.19 & 62.72 & 63.00 \(\pm\) 0.81 & 90.89 \(\pm\) 1.17 & - \\\hline
+3203 & 707 & 3233 & - & - & - & - & - & kritisch \\\hline
+3994 & 707 & 3233 & 104.43 & 105.00 & 103.22 & 104.22 \(\pm\) 0.74 & 150.36 \(\pm\) 1.07 & - \\\hline
+3994 & 0 & 3233 & - & - & - & - & - & kritisch \\\hline
+\end{tabular}
+\caption{Ergebnisse der Steuerstabkalibrierung. Im kritischen Zustand ist per definitionem die stabile Reaktorperiode \(T_{\mathrm{S}}\equiv\infty\), was aber nicht messbar ist.}
+\end{table}
+Für eine detailliertere Fehleranalyse müsste die persönliche Reaktionszeit jedes Experimentators bekannt sein. Um die Unsicherheit trotzdem abzuschätzen, wurde die statistische Unsicherheit des Mittelwertes verwendet und danach das Gaußsche Fehlerfortpflanzungsgesetz bei der Berechnung der stabilen Reaktorperiode angewendet. Die so ermittelten Unsicherheiten sind, abgesehen vom ersten Wert, realistisch für typische menschliche Reaktionszeiten. Der erste Wert hat möglicherweise deshalb eine größere Unsicherheit, weil es eben der erste Versuch war.  \\\\
+Mit den Werten der stabilen Reaktorperiode sowie den Stabstellungen können später differentielle und integrale Kennlinien für Stab 1 und Stab 2 gezeichnet werden. Für den Stab 3 liegen keine experimentellen Werte vor; uns wurde aber vom Betreuer des Versuches mitgeteilt, dass der Stab 3 praktisch die gleiche Kennlinie hat wie Stab 1 und dass nur Stab 2 geringfügig abweicht. Wir nehmen daher für die spätere Auswertung und Berechnung der Einfachheit halber an, dass Stab 1 und Stab 3 einander gleich sind und betrachten nur Stab 2 gesondert. Für eine verbesserte Kalibrierung müsste neben den Werte für Stab 3 auch noch mehr Messpunkte aufgenommen werden.
+
+\section{Auswertung}
+Aus den stabilen Reaktorperioden können mithilfe der Inhour-Gleichung die differentiellen Reaktivitäten berechnet werden. In Tab. 2 sind die sich ergebenden Werte einschließlich Unsicherheiten gemäß Gaußscher Fehlerfortpflanzung für die beiden Stäbe zusammengestellt. \\\\
+\begin{table}[h!]\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Stab 1 & Stab 2 & \((\frac{\mathrm{d}\rho}{\mathrm{d}z} \pm \Delta\frac{\mathrm{d}\rho}{\mathrm{d}z})/\,\frac{\mathrm{ct}}{\mathrm{unit}}\) \\\hline
+799 & 707 & 0.04516 \(\pm\) 0.00033 \\\hline
+1601 & 1806 & 0.08093 \(\pm\) 0.00032 \\\hline
+2401 & 2682 & 0.1101 \(\pm\) 0.0006 \\\hline
+3203 & 3422 & 0.1062 \(\pm\) 0.0011 \\\hline
+3994 & 4000 & 0.0710 \(\pm\) 0.0004 \\\hline
+\end{tabular}
+\caption{Differentielle Normierte Reaktivitäten}
+\end{table} 
+Für um die Anpassung einer Fitfunktion an die Daten einfacher zu gestalten wurden für die Graphik sowohl die Stabstellungen als auch die differentiellen Reaktivitäten normiert. Das Ergebnis samt Anpassung und Fitparametern ist in Abb. dargestellt. \\\\
+\begin{figure}[h!]\centering
+\includegraphics[width=\textwidth]{differentielle_Kennlinie.pdf}
+\caption{Differentielle Kennlinien für beide Stäbe mit normierten Achsenbereichen und Fitfunktion.}
+\end{figure}
+\newpage
+Da der Bereich längs der Abszissenachse in der Graphik um die maximale Eintauchtiefe von \(4000\,\mathrm{units}\) und die Ordinatenachse um das Maximum der differentiellen Reaktivität von \(0.1101\,\frac{\mathrm{ct}}{unit}\) verkleinert wurden, ergeben sich die tatsächlichen Parameter einfach durch Multiplikation der dimensionslosen Größen \(a\) und \(b\) mit den entsprechenden Skalierungsfaktoren zu
+\begin{align*}
+\tilde{a} &= (0.120\pm 0.009)\,\frac{\mathrm{ct}}{\mathrm{unit}} \ \text{und} \ \tilde{b} = (5440\pm 240)\,\mathrm{units} \ \text{für Stab 1 sowie} \\
+\tilde{a} &= (0.116\pm 0.011)\,\frac{\mathrm{ct}}{\mathrm{unit}} \ \text{und} \ \tilde{b} = (5600\pm 320)\,\mathrm{units} \ \text{für Stab 2.} 
+\end{align*}
+Mit diesen Resultaten kann man nun entweder die Fitfunktion numerisch integrieren oder das analytische Ergebnis aus der Vorbetrachtung verwenden: Kombiniert man die Gleichungen (10) bis (12) auf S.10, findet man, dass bei einem Ansatz der Form
+\begin{align*}
+\frac{\mathrm{d}\rho'}{\mathrm{d}z} = a\cdot\sin^2\left(\frac{\pi\cdot z}{b}\right)
+\end{align*}
+für die differentielle normierte Reaktivität \(\rho' := \frac{\rho}{\beta}\) die integrierte normierte Reaktivität gerade gegeben ist durch
+\begin{align}
+\rho'(z) = \frac{ab}{\pi\beta}\cdot\left[\frac{\pi}{2b}\cdot z - \frac{1}{4}\sin\left(\frac{2\pi z}{b}\right)\right].
+\end{align}
+Insbesondere lässt sich anhand dieser Formel auch sofort die Unsicherheit von \(\rho'\) ermitteln, da die Unsicherheiten von \(a\) und \(b\) bereits bekannt sind. Man erhält hierfür mit dem Gaußschen Fehlerfortpflanzungsgesetz:
+\begin{align}
+&\Delta \rho' = \frac{1}{2\beta r}\sqrt{(z \Delta a)^2\left[r - \sin(r)\right]^2 + (a z\Delta b)^2\left[r\cos(r) - \sin(r) \right]^2 + (a r\Delta z)^2\left[1 - \cos(r)\right]^2} \\
+&\text{mit} \ r := \frac{2\pi z}{b}.
+\end{align}
+Diese Formel zur Fehlerfortpflanzung gilt unter der Annahme, dass man für ein gegebenes \(z\), das selbst eine Unsicherheit hat, die Unsicherheit der normierten Reaktivität berechnen möchte. Falls \(z\) ein definierter Wert ist, setze man \(\Delta z \equiv 0\) wodurch der letzte Summand unter der Wurzel entfällt. \\\\
+Wendet man nun Gleichung (23) mit den in Abb. 12 graphisch bestimmten und umskalierten Parametern \(\tilde{a}\) und \(\tilde{b}\) an ergeben sich die integralen Kennlinien der beiden Stäbe 1 und 2. In Abb. 13 sind die differentiellen und integralen Kennlinien gegenübergestellt.
+\newpage
+\begin{figure}[h!]\centering
+\includegraphics[width=\textwidth]{Kennlinien.pdf}
+\caption{Kennlinien der Steuerstäbe 1 und 2; links differentiell, rechts integral.}
+\end{figure}
+Im kritischen Zustand befanden sich die Stäbe bei \(z_1=0\mathrm{units}\), \(z_2=4000\mathrm{units}\) und \(z_3=3233\mathrm{units}\). Ihre Reaktivitäten lassen sich anhand der Kennlinien zu \(\rho'_1 = 0\,\mathrm{ct}\), \(\rho'_2 = \,30\mathrm{ct}\) und \(\rho'_3 = 22.1\,\mathrm{ct}\) ablesen. Das ergibt eine Gesamtreaktivität von 
+\begin{align*}
+\underline{\underline{\rho'_{\mathrm{ges}} = 52.1\,\mathrm{ct}.}}
+\end{align*}
+Der Stab 2 kann dem Reaktor von diesem Zustand aus keine weitere Reaktivität mehr zuführen, da er bereits vollständig eingefahren ist. Stab 1 kann noch um die volle Länge von \(4000\mathrm{units}\) eingefahren werden und würde dann gemäß seiner Kennlinie eine Reaktivität von etwa \(\Delta\rho'_1=30\,\mathrm{ct}\) zuführen. Unter der Annahme, dass Stab 1 und Stab 3 einander gleichen, kann durch das vollständige Einfahren von Stab 3 noch eine Rektivität von weiteren \(\Delta\rho'_1=7.9\,\mathrm{ct}\) zugeführt werden. Damit erhält man eine Überschussreaktivität von
+\begin{align*}
+\underline{\underline{\rho'_{\mathrm{Überschuss}} = 37.9\mathrm{ct}.}}
+\end{align*}
+Die maximal mögliche Gesamtreaktivität liegt demnach bei knapp \(\rho'_{\mathrm{max}}\approx 90\,\mathrm{ct} < 1\,\$\). Deshalb ist es unmöglich, dass der Reaktor prompt überkritisch wird; weder durch einen technischen Defekt noch durch menschliches Versagen. Die Kettenrekation bleibt damit in jedem Fall kontrollierbar. Da nun sowohl die Überschussreaktivität als auch auch die Gesamtreaktivität im kritischen Zustand bekannt sind, erhält man noch die Abschaltreaktivität:
+\begin{align*}
+\underline{\underline{\rho'_{\mathrm{Abschalt}} = \rho'_{\mathrm{ges}} - \rho'_{\mathrm{Überschuss}} = 52.1\,\mathrm{ct} - 37.9\mathrm{ct} = 14.2\,\mathrm{ct}.}}
+\end{align*}
+Der Versuch im Ausbildungskernreaktor hat überdies grundlegende Kenntnisse über den Aufbau und den sicheren Betrieb kerntechnischer Anlagen vermittelt. Anhand der Einstellung des kritischen Zustandes und insbesondere der Vermessung der Verdopplungszeiten konnte das Verhalten des Reaktors bei Zufuhr oder Entzug von Reaktivität studiert werden. Interessant waren hierbei besonders die zeitlich verzögerte Reaktion im überkritischen Betrieb und die Sensitivität der Verdopplungszeit in Abhängigkeit von der Neutronenflussdichte. Zum sicheren und ordnungsgemäßen Betrieb der Anlage gehört neben besonderen Sicherheitsmaßnahmen auch die strikte Dokumentationspflicht im Betriebshandbuch des Reaktors. In diesem Buch wurden sämtliche Parameter die während des Experiments aufgenommen wurden, schriftlich festgehalten. Das Handbuch umfasst zusätzlich alle baulichen Veränderungen, die je am Reaktor vorgenommen wurden. Durch die Dokumentation wird sichergestellt, dass für jeden Experimentator der Zustand des Reaktors zu allen Zeiten nachvollziehbar ist.
     % Bibliographie/Literaturverzeichnis
     \begin{thebibliography}{9}
     \bibitem{1}
